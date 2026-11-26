@@ -1,44 +1,304 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101713"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="BULK 85"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101713">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BULK 85">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>BULK 85</title>
 <style>
 :root{--bg:#0b110d;--panel:#141e17;--panel2:#1c2a20;--line:#2a3b2f;--txt:#f3f8f2;--muted:#9eafa1;--lime:#baff69;--red:#ff7777}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#203923 0,transparent 45%),var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;padding-bottom:90px}
-.wrap{max-width:720px;margin:auto;padding:18px 16px 30px}.top{display:flex;align-items:center;justify-content:space-between;margin:8px 0 22px}.brand{font-weight:950;letter-spacing:1.5px;font-size:25px}.brand span{color:var(--lime)}.pill{font-size:10px;color:var(--lime);border:1px solid #58763b;padding:6px 10px;border-radius:30px}
-h1{font-size:25px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin-bottom:18px}.panel{background:linear-gradient(145deg,#17231b,#111813);border:1px solid var(--line);border-radius:20px;padding:16px;margin:13px 0}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat,.macro{background:var(--panel2);border-radius:15px;padding:14px}.label{font-size:12px;color:var(--muted)}.num{font-size:26px;font-weight:850;margin-top:5px}.unit{font-size:12px;color:var(--muted);font-weight:500}.progress{height:9px;background:#344238;border-radius:20px;overflow:hidden;margin:12px 0 5px}.progress i{display:block;height:100%;background:linear-gradient(90deg,#8bd83e,var(--lime));border-radius:20px;width:0}
-.macros{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.macro b{display:block;font-size:19px;margin-top:5px}.macro small{color:var(--muted);font-size:11px}
-button{border:0;border-radius:13px;padding:14px 16px;background:var(--lime);color:#101710;font-weight:850;font-size:14px;cursor:pointer}.btn2{background:#26372b;color:var(--txt);border:1px solid var(--line)}.full{width:100%}input,select{width:100%;background:#0e1510;border:1px solid var(--line);border-radius:11px;padding:12px;color:var(--txt);font-size:14px;outline:none}label{display:block;color:var(--muted);font-size:12px;margin:12px 0 6px}.tabs{position:fixed;bottom:0;left:0;right:0;background:#101713ed;backdrop-filter:blur(16px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:5;padding:9px 8px calc(9px + env(safe-area-inset-bottom))}.tabs button{background:none;color:var(--muted);font-size:11px;padding:7px 12px;flex:1;max-width:180px}.tabs button.active{color:var(--lime)}.page{display:none}.page.active{display:block}.meal{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}.meal:last-child{border:0}.thumb{width:56px;height:56px;border-radius:12px;object-fit:cover;background:#29382e}.mealinfo{flex:1;min-width:0}.mealinfo b{display:block;font-size:14px}.mealinfo small{color:var(--muted)}.kcal{font-weight:800;color:var(--lime);white-space:nowrap}.hint{color:var(--muted);font-size:12px;line-height:1.7}.empty{text-align:center;padding:24px;color:var(--muted);font-size:13px}.photo{width:100%;max-height:250px;object-fit:cover;border-radius:14px;margin-top:12px;display:none}.sectiontitle{font-size:16px;font-weight:800;margin:5px 0 12px}.row{display:flex;gap:9px;align-items:center}.row>*{flex:1}.danger{color:var(--red)}
-</style></head>
-<body><main class="wrap">
-<header class="top"><div class="brand">BULK <span>85</span></div><div class="pill">LOCAL · PRIVATE</div></header>
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 80% -10%,#203923 0,transparent 45%),var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;padding-bottom:90px}
+.wrap{max-width:720px;margin:auto;padding:18px 16px 30px}
+.top{display:flex;align-items:center;justify-content:space-between;margin:8px 0 22px}
+.brand{font-weight:950;letter-spacing:1.5px;font-size:25px}
+.brand span{color:var(--lime)}
+.pill{font-size:10px;color:var(--lime);border:1px solid #58763b;padding:6px 10px;border-radius:30px}
+h1{font-size:25px;margin:0 0 5px}
+.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.panel{background:linear-gradient(145deg,#17231b,#111813);border:1px solid var(--line);border-radius:20px;padding:16px;margin:13px 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat,.macro{background:var(--panel2);border-radius:15px;padding:14px}
+.label{font-size:12px;color:var(--muted)}
+.num{font-size:26px;font-weight:850;margin-top:5px}
+.unit{font-size:12px;color:var(--muted);font-weight:500}
+.progress{height:9px;background:#344238;border-radius:20px;overflow:hidden;margin:12px 0 5px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,#8bd83e,var(--lime));border-radius:20px;width:0}
+.macros{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.macro b{display:block;font-size:19px;margin-top:5px}
+.macro small{color:var(--muted);font-size:11px}
+button{border:0;border-radius:13px;padding:14px 16px;background:var(--lime);color:#101710;font-weight:850;font-size:14px;cursor:pointer}
+.btn2{background:#26372b;color:var(--txt);border:1px solid var(--line)}
+.full{width:100%}
+input,select{width:100%;background:#0e1510;border:1px solid var(--line);border-radius:11px;padding:12px;color:var(--txt);font-size:14px;outline:none}
+label{display:block;color:var(--muted);font-size:12px;margin:12px 0 6px}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:#101713ed;backdrop-filter:blur(16px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:5;padding:9px 8px calc(9px + env(safe-area-inset-bottom))}
+.tabs button{background:none;color:var(--muted);font-size:11px;padding:7px 12px;flex:1;max-width:180px}
+.tabs button.active{color:var(--lime)}
+.page{display:none}
+.page.active{display:block}
+.meal{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}
+.meal:last-child{border:0}
+.thumb{width:56px;height:56px;border-radius:12px;object-fit:cover;background:#29382e}
+.mealinfo{flex:1;min-width:0}
+.mealinfo b{display:block;font-size:14px}
+.mealinfo small{color:var(--muted)}
+.kcal{font-weight:800;color:var(--lime);white-space:nowrap}
+.hint{color:var(--muted);font-size:12px;line-height:1.7}
+.empty{text-align:center;padding:24px;color:var(--muted);font-size:13px}
+.photo{width:100%;max-height:250px;object-fit:cover;border-radius:14px;margin-top:12px;display:none}
+.sectiontitle{font-size:16px;font-weight:800;margin:5px 0 12px}
+.row{display:flex;gap:9px;align-items:center}
+.row>*{flex:1}
+.danger{color:var(--red)}
+.ai-button{width:100%;margin-top:12px;background:#26372b;color:var(--lime);border:1px solid #58763b}
+.ai-button:disabled{opacity:.6;cursor:wait}
+.ai-status{margin-top:10px;min-height:20px;color:var(--muted);font-size:12px;line-height:1.6}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+<div class="brand">BULK <span>85</span></div>
+<div class="pill">LOCAL · PRIVATE</div>
+</header>
+
 <section id="home" class="page active">
-<h1>رحلتك تبدأ اليوم.</h1><div class="sub">كل بياناتك محفوظة على هذا الجهاز فقط.</div>
-<div class="panel"><div class="stats"><div class="stat"><div class="label">وزنك الحالي</div><div class="num"><span id="homeWeight">70</span> <span class="unit">KG</span></div></div><div class="stat"><div class="label">الوزن المستهدف</div><div class="num"><span id="homeGoal">85</span> <span class="unit">KG</span></div></div></div><div class="progress"><i id="weightProgress"></i></div><div class="hint" id="weightHint"></div></div>
-<div class="panel"><div class="row" style="align-items:end"><div><div class="label">السعرات المتبقية</div><div class="num" style="font-size:34px"><span id="remaining">0</span> <span class="unit">kcal</span></div></div><div style="text-align:left"><div class="label">المستهلك</div><b id="consumed">0 kcal</b></div></div><div class="progress"><i id="calProgress"></i></div><div class="hint">هدفك اليومي: <b id="calGoalText">2800</b> kcal</div></div>
-<div class="sectiontitle">الماكروز اليومية</div><div class="macros"><div class="macro"><small>بروتين</small><b><span id="pNow">0</span><small> / <span id="pGoal">150</span>g</small></b></div><div class="macro"><small>كارب</small><b><span id="cNow">0</span><small> / <span id="cGoal">350</span>g</small></b></div><div class="macro"><small>دهون</small><b><span id="fNow">0</span><small> / <span id="fGoal">80</span>g</small></b></div></div>
-<div class="panel"><div class="sectiontitle">وجبات اليوم</div><div id="todayMeals" class="empty">ما سجلت أي وجبة اليوم.</div><button class="full" onclick="go('add')">＋ أضف وجبة / صوّر وجبتك</button></div>
+<h1>رحلتك تبدأ اليوم.</h1>
+<div class="sub">كل بياناتك محفوظة على هذا الجهاز فقط.</div>
+<div class="panel">
+<div class="stats">
+<div class="stat"><div class="label">وزنك الحالي</div><div class="num"><span id="homeWeight">70</span> <span class="unit">KG</span></div></div>
+<div class="stat"><div class="label">الوزن المستهدف</div><div class="num"><span id="homeGoal">85</span> <span class="unit">KG</span></div></div>
+</div>
+<div class="progress"><i id="weightProgress"></i></div>
+<div class="hint" id="weightHint"></div>
+</div>
+<div class="panel">
+<div class="row" style="align-items:end">
+<div><div class="label">السعرات المتبقية</div><div class="num" style="font-size:34px"><span id="remaining">0</span> <span class="unit">kcal</span></div></div>
+<div style="text-align:left"><div class="label">المستهلك</div><b id="consumed">0 kcal</b></div>
+</div>
+<div class="progress"><i id="calProgress"></i></div>
+<div class="hint">هدفك اليومي: <b id="calGoalText">2800</b> kcal</div>
+</div>
+<div class="sectiontitle">الماكروز اليومية</div>
+<div class="macros">
+<div class="macro"><small>بروتين</small><b><span id="pNow">0</span><small> / <span id="pGoal">150</span>g</small></b></div>
+<div class="macro"><small>كارب</small><b><span id="cNow">0</span><small> / <span id="cGoal">350</span>g</small></b></div>
+<div class="macro"><small>دهون</small><b><span id="fNow">0</span><small> / <span id="fGoal">80</span>g</small></b></div>
+</div>
+<div class="panel">
+<div class="sectiontitle">وجبات اليوم</div>
+<div id="todayMeals" class="empty">ما سجلت أي وجبة اليوم.</div>
+<button class="full" onclick="go('add')">＋ أضف وجبة / صوّر وجبتك</button>
+</div>
 </section>
-<section id="add" class="page"><h1>إضافة وجبة</h1><div class="sub">التقط صورة واحتفظ بها محلياً، ثم أدخل القيم الغذائية من الملصق أو تقديرك.</div><div class="panel">
-<div class="sectiontitle">صورة الوجبة</div><input id="photoInput" type="file" accept="image/*" capture="environment"><img id="preview" class="photo">
-<p class="hint">خصوصية كاملة تعني أن الصورة لا تُرسل إلى أي خدمة ذكاء اصطناعي. لذلك لا يوجد تحليل سحابي تلقائي في هذه النسخة. تقدير السعرات من صورة وحدها قد يكون غير دقيق؛ أدخل الكمية والقيم أو استخدم ملصق المنتج.</p>
-<div class="sectiontitle" style="margin-top:18px">القيم الغذائية</div><label>اسم الوجبة / المكونات</label><input id="mealName" placeholder="مثال: رز ودجاج">
-<div class="row"><div><label>السعرات kcal</label><input id="mealKcal" type="number" min="0" placeholder="650"></div><div><label>البروتين g</label><input id="mealP" type="number" min="0" placeholder="45"></div></div><div class="row"><div><label>الكارب g</label><input id="mealC" type="number" min="0" placeholder="75"></div><div><label>الدهون g</label><input id="mealF" type="number" min="0" placeholder="18"></div></div><label>نوع الوجبة</label><select id="mealType"><option>فطور</option><option>غداء</option><option>عشاء</option><option>سناك</option><option>بعد التمرين</option></select><button class="full" style="margin-top:16px" onclick="addMeal()">احفظ واطرح السعرات</button></div></section>
-<section id="progress" class="page"><h1>تقدمك</h1><div class="sub">حدّث وزنك وأهدافك الغذائية.</div><div class="panel"><div class="sectiontitle">تسجيل الوزن</div><label>وزنك اليوم kg</label><input id="weightInput" type="number" step=".1" placeholder="70"><button class="full" style="margin-top:12px" onclick="saveWeight()">حفظ الوزن</button></div><div class="panel"><div class="sectiontitle">سجل الأوزان</div><div id="weightHistory" class="empty">لا توجد قياسات بعد.</div></div><div class="panel"><div class="sectiontitle">أهدافك</div><div class="row"><div><label>الوزن المستهدف kg</label><input id="goalInput" type="number"></div><div><label>السعرات اليومية</label><input id="calInput" type="number"></div></div><div class="row"><div><label>البروتين g</label><input id="pInput" type="number"></div><div><label>الكارب g</label><input id="cInput" type="number"></div></div><label>الدهون g</label><input id="fInput" type="number"><button class="full" style="margin-top:14px" onclick="saveGoals()">حفظ الأهداف</button></div></section>
-<section id="history" class="page"><h1>سجل الوجبات</h1><div class="sub">محفوظ على هذا الجهاز.</div><div class="panel" id="allMeals"><div class="empty">لا توجد وجبات.</div></div><button class="full btn2" onclick="exportData()">تصدير نسخة احتياطية</button><button class="full btn2" style="margin-top:9px" onclick="clearMeals()">مسح سجل الوجبات</button></section>
-</main><nav class="tabs"><button class="active" data-page="home" onclick="go('home')">⌂<br>الرئيسية</button><button data-page="add" onclick="go('add')">＋<br>إضافة وجبة</button><button data-page="progress" onclick="go('progress')">↗<br>التقدم</button><button data-page="history" onclick="go('history')">▤<br>السجل</button></nav>
+
+<section id="add" class="page">
+<h1>إضافة وجبة</h1>
+<div class="sub">التقط صورة واحتفظ بها محلياً، ثم أدخل القيم الغذائية من الملصق أو تقديرك.</div>
+<div class="panel">
+<div class="sectiontitle">صورة الوجبة</div>
+<input id="photoInput" type="file" accept="image/*" capture="environment">
+<img id="preview" class="photo">
+<p class="hint">يمكنك إرسال صورة الوجبة إلى Gemini لتحليلها وتقدير السعرات والماكروز. النتائج تقديرية وقد تحتاج تعديل الكمية أو القيم قبل الحفظ. لا ترفع صورًا تحتوي معلومات شخصية.</p>
+<button id="analyzeBtn" class="ai-button full" type="button" onclick="analyzeMeal()">✨ حلّل الصورة واملأ القيم تلقائيًا</button>
+<div id="aiStatus" class="ai-status" role="status" aria-live="polite"></div>
+<div class="sectiontitle" style="margin-top:18px">القيم الغذائية</div>
+<label>اسم الوجبة / المكونات</label>
+<input id="mealName" placeholder="مثال: رز ودجاج">
+<div class="row">
+<div><label>السعرات kcal</label><input id="mealKcal" type="number" min="0" placeholder="650"></div>
+<div><label>البروتين g</label><input id="mealP" type="number" min="0" placeholder="45"></div>
+</div>
+<div class="row">
+<div><label>الكارب g</label><input id="mealC" type="number" min="0" placeholder="75"></div>
+<div><label>الدهون g</label><input id="mealF" type="number" min="0" placeholder="18"></div>
+</div>
+<label>نوع الوجبة</label>
+<select id="mealType">
+<option>فطور</option><option>غداء</option><option>عشاء</option><option>سناك</option><option>بعد التمرين</option>
+</select>
+<button class="full" style="margin-top:16px" onclick="addMeal()">احفظ واطرح السعرات</button>
+</div>
+</section>
+
+<section id="progress" class="page">
+<h1>تقدمك</h1>
+<div class="sub">حدّث وزنك وأهدافك الغذائية.</div>
+<div class="panel">
+<div class="sectiontitle">تسجيل الوزن</div>
+<label>وزنك اليوم kg</label>
+<input id="weightInput" type="number" step=".1" placeholder="70">
+<button class="full" style="margin-top:12px" onclick="saveWeight()">حفظ الوزن</button>
+</div>
+<div class="panel">
+<div class="sectiontitle">سجل الأوزان</div>
+<div id="weightHistory" class="empty">لا توجد قياسات بعد.</div>
+</div>
+<div class="panel">
+<div class="sectiontitle">أهدافك</div>
+<div class="row">
+<div><label>الوزن المستهدف kg</label><input id="goalInput" type="number"></div>
+<div><label>السعرات اليومية</label><input id="calInput" type="number"></div>
+</div>
+<div class="row">
+<div><label>البروتين g</label><input id="pInput" type="number"></div>
+<div><label>الكارب g</label><input id="cInput" type="number"></div>
+</div>
+<label>الدهون g</label>
+<input id="fInput" type="number">
+<button class="full" style="margin-top:14px" onclick="saveGoals()">حفظ الأهداف</button>
+</div>
+</section>
+
+<section id="history" class="page">
+<h1>سجل الوجبات</h1>
+<div class="sub">محفوظ على هذا الجهاز.</div>
+<div class="panel" id="allMeals"><div class="empty">لا توجد وجبات.</div></div>
+<button class="full btn2" onclick="exportData()">تصدير نسخة احتياطية</button>
+<button class="full btn2" style="margin-top:9px" onclick="clearMeals()">مسح سجل الوجبات</button>
+</section>
+</main>
+
+<nav class="tabs">
+<button class="active" data-page="home" onclick="go('home')">⌂<br>الرئيسية</button>
+<button data-page="add" onclick="go('add')">＋<br>إضافة وجبة</button>
+<button data-page="progress" onclick="go('progress')">↗<br>التقدم</button>
+<button data-page="history" onclick="go('history')">▤<br>السجل</button>
+</nav>
+
 <script>
-const $=id=>document.getElementById(id),today=()=>new Date().toLocaleDateString('en-CA');let data=JSON.parse(localStorage.getItem('bulk85')||'{}');data.goals=data.goals||{weight:70,target:85,kcal:2800,p:150,c:350,f:80};data.meals=data.meals||[];data.weights=data.weights||[];function persist(){localStorage.setItem('bulk85',JSON.stringify(data));render()}function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));$(p).classList.add('active');document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.page===p));if(p==='progress')fillGoals()}
-function totals(a){return a.reduce((s,m)=>({k:s.k+(+m.kcal||0),p:s.p+(+m.p||0),c:s.c+(+m.c||0),f:s.f+(+m.f||0)}),{k:0,p:0,c:0,f:0})}function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function mealHTML(m){return `<div class="meal">${m.photo?`<img class="thumb" src="${m.photo}">`:'<div class="thumb" style="display:grid;place-items:center">🍽️</div>'}<div class="mealinfo"><b>${esc(m.name||m.type)}</b><small>${m.type} · P ${m.p}g · C ${m.c}g · F ${m.f}g</small></div><div class="kcal">${m.kcal} kcal</div></div>`}
-function render(){let g=data.goals,a=data.meals.filter(m=>m.date===today()),t=totals(a);$('homeWeight').textContent=g.weight;$('homeGoal').textContent=g.target;$('remaining').textContent=Math.max(0,g.kcal-t.k);$('consumed').textContent=t.k+' kcal';$('calGoalText').textContent=g.kcal;$('calProgress').style.width=Math.min(100,t.k/g.kcal*100)+'%';$('pNow').textContent=t.p;$('cNow').textContent=t.c;$('fNow').textContent=t.f;$('pGoal').textContent=g.p;$('cGoal').textContent=g.c;$('fGoal').textContent=g.f;$('weightProgress').style.width=Math.min(100,g.weight/g.target*100)+'%';$('weightHint').textContent=`متبقي ${(g.target-g.weight).toFixed(1)} كجم للوصول لهدفك.`;$('todayMeals').innerHTML=a.length?a.map(mealHTML).join(''):'<div class="empty">ما سجلت أي وجبة اليوم.</div>';$('allMeals').innerHTML=data.meals.length?[...data.meals].reverse().map(mealHTML).join(''):'<div class="empty">لا توجد وجبات.</div>';$('weightHistory').innerHTML=data.weights.length?[...data.weights].reverse().map(w=>`<div class="meal"><div class="mealinfo"><b>${w.value} kg</b><small>${w.date}</small></div></div>`).join(''):'<div class="empty">لا توجد قياسات بعد.</div>'}
-let photo='';$('photoInput').addEventListener('change',e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{let img=new Image();img.onload=()=>{let scale=Math.min(1,1200/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);photo=c.toDataURL('image/jpeg',0.72);$('preview').src=photo;$('preview').style.display='block'};img.src=r.result};r.readAsDataURL(f)});
-function addMeal(){let m={date:today(),name:$('mealName').value.trim()||'وجبة',type:$('mealType').value,kcal:+$('mealKcal').value,p:+$('mealP').value,c:+$('mealC').value,f:+$('mealF').value,photo};if(!m.kcal&&!m.p&&!m.c&&!m.f){alert('أدخل القيم الغذائية أولاً');return}data.meals.push(m);['mealName','mealKcal','mealP','mealC','mealF'].forEach(i=>$(i).value='');$('photoInput').value='';$('preview').style.display='none';photo='';persist();go('home')}
-function saveWeight(){let v=+$('weightInput').value;if(!v||v<30||v>300){alert('أدخل وزناً صحيحاً');return}data.goals.weight=v;data.weights.push({value:v,date:today()});persist();$('weightInput').value=''}
-function fillGoals(){let g=data.goals;[['goalInput','target'],['calInput','kcal'],['pInput','p'],['cInput','c'],['fInput','f']].forEach(([i,k])=>$(i).value=g[k])}
-function saveGoals(){let g=data.goals;[['goalInput','target'],['calInput','kcal'],['pInput','p'],['cInput','c'],['fInput','f']].forEach(([i,k])=>{let v=+$(i).value;if(v>0)g[k]=v});persist();alert('تم حفظ الأهداف')}
-function clearMeals(){if(confirm('مسح كل سجل الوجبات؟')){data.meals=[];persist()}}function exportData(){let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='BULK85-backup.json';a.click();URL.revokeObjectURL(a.href)}render();if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
-</script></body></html>
+const $=id=>document.getElementById(id);
+const today=()=>new Date().toLocaleDateString('en-CA');
+let data=JSON.parse(localStorage.getItem('bulk85')||'{}');
+data.goals=data.goals||{weight:70,target:85,kcal:2800,p:150,c:350,f:80};
+data.meals=data.meals||[];
+data.weights=data.weights||[];
+
+function persist(){localStorage.setItem('bulk85',JSON.stringify(data));render()}
+function go(p){
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+$(p).classList.add('active');
+document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.page===p));
+if(p==='progress')fillGoals()
+}
+function totals(a){
+return a.reduce((s,m)=>({k:s.k+(+m.kcal||0),p:s.p+(+m.p||0),c:s.c+(+m.c||0),f:s.f+(+m.f||0)}),{k:0,p:0,c:0,f:0})
+}
+function esc(s){
+return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
+}
+function mealHTML(m){
+return `<div class="meal">${m.photo?`<img class="thumb" src="${m.photo}">`:'<div class="thumb" style="display:grid;place-items:center">🍽️</div>'}<div class="mealinfo"><b>${esc(m.name||m.type)}</b><small>${m.type} · P ${m.p}g · C ${m.c}g · F ${m.f}g</small></div><div class="kcal">${m.kcal} kcal</div></div>`
+}
+function render(){
+let g=data.goals,a=data.meals.filter(m=>m.date===today()),t=totals(a);
+$('homeWeight').textContent=g.weight;
+$('homeGoal').textContent=g.target;
+$('remaining').textContent=Math.max(0,g.kcal-t.k);
+$('consumed').textContent=t.k+' kcal';
+$('calGoalText').textContent=g.kcal;
+$('calProgress').style.width=Math.min(100,t.k/g.kcal*100)+'%';
+$('pNow').textContent=t.p;
+$('cNow').textContent=t.c;
+$('fNow').textContent=t.f;
+$('pGoal').textContent=g.p;
+$('cGoal').textContent=g.c;
+$('fGoal').textContent=g.f;
+$('weightProgress').style.width=Math.min(100,g.weight/g.target*100)+'%';
+$('weightHint').textContent=`متبقي ${(g.target-g.weight).toFixed(1)} كجم للوصول لهدفك.`;
+$('todayMeals').innerHTML=a.length?a.map(mealHTML).join(''):'<div class="empty">ما سجلت أي وجبة اليوم.</div>';
+$('allMeals').innerHTML=data.meals.length?[...data.meals].reverse().map(mealHTML).join(''):'<div class="empty">لا توجد وجبات.</div>';
+$('weightHistory').innerHTML=data.weights.length?[...data.weights].reverse().map(w=>`<div class="meal"><div class="mealinfo"><b>${w.value} kg</b><small>${w.date}</small></div></div>`).join(''):'<div class="empty">لا توجد قياسات بعد.</div>';
+}
+let photo='';
+$('photoInput').addEventListener('change',e=>{
+let f=e.target.files[0];if(!f)return;
+let r=new FileReader();
+r.onload=()=>{
+let img=new Image();
+img.onload=()=>{
+let scale=Math.min(1,1200/Math.max(img.width,img.height)),c=document.createElement('canvas');
+c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);
+c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+photo=c.toDataURL('image/jpeg',0.72);
+$('preview').src=photo;$('preview').style.display='block';
+};
+img.src=r.result;
+};
+r.readAsDataURL(f);
+});
+
+async function analyzeMeal(){
+if(!photo){alert('اختر صورة الوجبة أولاً');return}
+const btn=$('analyzeBtn'),status=$('aiStatus');
+btn.disabled=true;btn.textContent='جارٍ تحليل الصورة...';
+status.textContent='قد يستغرق التحليل عدة ثوانٍ. لا تغلق الصفحة.';
+try{
+const comma=photo.indexOf(',');
+if(comma<0)throw new Error('تعذر قراءة الصورة');
+const imageBase64=photo.slice(comma+1);
+const res=await fetch('https://bulk85ai.abdulrhamanalrweil.workers.dev/',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({imageBase64,mimeType:'image/jpeg'})
+});
+const payload=await res.json().catch(()=>({error:'استجابة غير مفهومة من الخادم'}));
+if(!res.ok)throw new Error(payload.error||('خطأ من الخادم: '+res.status));
+const m=payload.result||payload;
+if(m.meal_name)$('mealName').value=m.meal_name;
+if(Number.isFinite(Number(m.kcal))) $('mealKcal').value=Math.round(Number(m.kcal));
+if(Number.isFinite(Number(m.protein_g))) $('mealP').value=Math.round(Number(m.protein_g));
+if(Number.isFinite(Number(m.carbs_g))) $('mealC').value=Math.round(Number(m.carbs_g));
+if(Number.isFinite(Number(m.fat_g))) $('mealF').value=Math.round(Number(m.fat_g));
+status.textContent=(m.notes?m.notes+' ':'')+'تم التحليل. راجع القيم وعدّلها قبل الحفظ؛ التقدير من الصورة غير دقيق دائمًا.';
+}catch(err){
+status.textContent='تعذر التحليل: '+err.message;
+}finally{
+btn.disabled=false;btn.textContent='✨ حلّل الصورة واملأ القيم تلقائيًا';
+}
+}
+
+function addMeal(){
+let m={date:today(),name:$('mealName').value.trim()||'وجبة',type:$('mealType').value,kcal:+$('mealKcal').value,p:+$('mealP').value,c:+$('mealC').value,f:+$('mealF').value,photo};
+if(!m.kcal&&!m.p&&!m.c&&!m.f){alert('أدخل القيم الغذائية أولاً');return}
+data.meals.push(m);
+['mealName','mealKcal','mealP','mealC','mealF'].forEach(i=>$(i).value='');
+$('photoInput').value='';$('preview').style.display='none';photo='';
+persist();go('home');
+}
+function saveWeight(){
+let v=+$('weightInput').value;
+if(!v||v<30||v>300){alert('أدخل وزناً صحيحاً');return}
+data.goals.weight=v;data.weights.push({value:v,date:today()});
+persist();$('weightInput').value='';
+}
+function fillGoals(){
+let g=data.goals;
+[['goalInput','target'],['calInput','kcal'],['pInput','p'],['cInput','c'],['fInput','f']].forEach(([i,k])=>$(i).value=g[k]);
+}
+function saveGoals(){
+let g=data.goals;
+[['goalInput','target'],['calInput','kcal'],['pInput','p'],['cInput','c'],['fInput','f']].forEach(([i,k])=>{let v=+$(i).value;if(v>0)g[k]=v});
+persist();alert('تم حفظ الأهداف');
+}
+function clearMeals(){
+if(confirm('مسح كل سجل الوجبات؟')){data.meals=[];persist()}
+}
+function exportData(){
+let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');
+a.href=URL.createObjectURL(b);a.download='BULK85-backup.json';a.click();URL.revokeObjectURL(a.href)
+}
+render();
+if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+</script>
+</body>
+</html>
